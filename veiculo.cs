@@ -13,6 +13,10 @@ class veiculo{
     valor = v;
   }
 
+  public double GetValor(){
+    return valor;
+  }
+
   public void relatorio(){
     Console.WriteLine("Informações do Veículo");
     Console.WriteLine("Marca:{0} | Ano:{1}",marca,ano);

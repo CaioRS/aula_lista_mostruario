@@ -1,12 +1,16 @@
 using System.Collections.Generic;
+using System;
 
 class mostruario {
+   private double valor = 0;
+
   //TAD
   private vendedor Representante;
        //EST  <TAD>    VARIAVEL 
-  public List<veiculo> carros;
+  public List <veiculo> carros;
 
-  public mostruario(){
+  public mostruario(vendedor v){
+    Representante = v;
     carros = new List<veiculo>();
 
   }
@@ -15,5 +19,11 @@ class mostruario {
     Representante = v;
   }
 
+  public double CalculaValor(){
+    for(int i=0;i<carros.Count;i++){
+      valor+=carros[i].GetValor();
+    }
+    return valor;
+  }
 
 }
